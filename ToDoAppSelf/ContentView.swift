@@ -31,13 +31,16 @@ struct ContentView: View {
                 TextField("Task Name", text: $task)
                     .padding()
 
-                Button("Add Task") {
-                    // append the task to the list
-                    taskList.append(task)
-                    // clear the input field
-                    task = ""
-                }
-                .buttonStyle(.borderedProminent)
+                //                Button("Add Task") {
+                //                    // append the task to the list
+                //                    taskList.append(task)
+                //                    // clear the input field
+                //                    task = ""
+                //                }
+                //                .buttonStyle(.borderedProminent)
+
+                // embed custome add task btn
+                CustomeBtnView(taskList: $taskList, task: $task)
             }
 
             VStack {
